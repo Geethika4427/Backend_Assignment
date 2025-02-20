@@ -36,10 +36,10 @@ Email Service: Symfony Mailer
 ## API Endpoints
 
   **User Management API**
-   - POST &nbsp;&nbsp;&nbsp;	  /api/upload&nbsp;&nbsp;&nbsp;	   Upload and store user data from CSV
-   - GET	 &nbsp;&nbsp;&nbsp;&nbsp;    /api/users&nbsp;&nbsp;&nbsp;  	   Retrieve all stored users
-   - GET	 &nbsp;&nbsp;&nbsp;    /api/backup&nbsp;&nbsp;&nbsp;	   Backup the MySQL database
-   - POST &nbsp;&nbsp;&nbsp;    /api/restore&nbsp;&nbsp;&nbsp;	   Restore database from backup
+   - POST &nbsp;&nbsp;&nbsp;	  http://127.0.0.1:8000/api/upload/api/upload&nbsp;&nbsp;&nbsp;	   Upload and store user data from CSV
+   - GET	 &nbsp;&nbsp;&nbsp;&nbsp;    http://127.0.0.1:8000/api/upload/api/users&nbsp;&nbsp;&nbsp;  	   Retrieve all stored users
+   - GET	 &nbsp;&nbsp;&nbsp;    http://127.0.0.1:8000/api/upload/api/backup&nbsp;&nbsp;&nbsp;	   Backup the MySQL database
+   - POST &nbsp;&nbsp;&nbsp;    http://127.0.0.1:8000/api/upload/api/restore&nbsp;&nbsp;&nbsp;	   Restore database from backup
 
    **Twitter OAuth API**
    - GET	 &nbsp;&nbsp;&nbsp;     /auth/twitter&nbsp;&nbsp;&nbsp;	             Initiate Twitter authentication
@@ -55,6 +55,31 @@ Email Service: Symfony Mailer
          - https://your-domain.com/auth/twitter/callback
    3. Obtain API Key and API Secret Key
    4. Update .env file with these credentials
+
+## Ngrok Setup (For Local Development)
+   > If you are testing Twitter OAuth on your local machine, you need Ngrok to expose your local server to the internet. Follow these steps:
+
+   1) Install Ngrok<br>
+      If you haven't installed Ngrok yet, download and install it from:
+      (Ngrok Official Website)
+
+   2) Start Ngrok<br>
+      Run the following command to expose your local Symfony server:<br>
+      
+      ngrok http 8000
+
+   3) Update Twitter OAuth Callback URL<br>
+      Go to Twitter Developer Portal and set your callback URL to:<br>  
+      https://random-id.ngrok.io/auth/twitter/callback<br>
+      > Replace random-id.ngrok.io with your actual Ngrok URL.
+
+   4) Update .env File<br>
+      Modify your .env file to use Ngrok’s URL:<br>
+      TWITTER_CALLBACK_URL= https://random-id.ngrok.io/auth/twitter/callback
+   5)Restart Symfony Server<br>
+     Restart your Symfony server to apply the changes:<br>
+
+     symfony server:start
 
  ## Video Submission
    ()
