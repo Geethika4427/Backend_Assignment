@@ -22,10 +22,10 @@ Email Service: Symfony Mailer
 4) **Configure Environment Variables**<br>
    > Rename .env.example to .env and set up your database and Twitter API keys:
 
-   DATABASE_URL=mysql://user:password@127.0.0.1:3306/user_management<br>
-   TWITTER_API_KEY=your_api_key<br>
-   TWITTER_API_SECRET=your_api_secret<br>
-   MAILER_DSN=smtp://your_smtp_service
+   DATABASE_URL=mysql: //user:password@127.0.0.1:3306/user_management<br>
+   TWITTER_API_KEY= your_api_key<br>
+   TWITTER_API_SECRET= your_api_secret<br>
+   MAILER_DSN=smtp: //your_smtp_service
   
 5) **Run Database Migrations**<br>
    php bin/console doctrine:migrations:migrate
@@ -36,8 +36,8 @@ Email Service: Symfony Mailer
 ## API Endpoints
 
   **User Management API**
-   - POST	  /api/upload	   Upload and store user data from CSV
-   - GET	  /api/users  	 Retrieve all stored users
+   - POST &nbsp;&nbsp;&nbsp;	  /api/upload&nbsp;&nbsp;&nbsp;	   Upload and store user data from CSV
+   - GET	  /api/users&nbsp;&nbsp;&nbsp;  	 Retrieve all stored users
    - GET	  /api/backup	   Backup the MySQL database
    - POST	  /api/restore	 Restore database from backup
 
