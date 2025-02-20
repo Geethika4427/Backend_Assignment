@@ -43,7 +43,7 @@ Email Service: Symfony Mailer
 
    **Twitter OAuth API**
    - GET	 &nbsp;&nbsp;&nbsp;     https://c060-60-243-164-51.ngrok-free.app/auth/twitter/auth/twitter&nbsp;&nbsp;&nbsp;	             Initiate Twitter authentication
-   - GET	 &nbsp;&nbsp;&nbsp;     /auth/twitter/callback&nbsp;&nbsp;&nbsp;	             Handle Twitter OAuth response
+   - GET	 &nbsp;&nbsp;&nbsp;     https://c060-60-243-164-51.ngrok-free.app/auth/twitter/callback/auth/twitter/callback&nbsp;&nbsp;&nbsp;	             Handle Twitter OAuth response
 
  ## Email Notifications
    - Uses Symfony Mailer for sending emails asynchronously
