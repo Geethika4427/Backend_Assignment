@@ -37,13 +37,13 @@ Email Service: Symfony Mailer
 
   **User Management API**
    - POST &nbsp;&nbsp;&nbsp;	  /api/upload&nbsp;&nbsp;&nbsp;	   Upload and store user data from CSV
-   - GET	  /api/users&nbsp;&nbsp;&nbsp;  	 Retrieve all stored users
-   - GET	  /api/backup	   Backup the MySQL database
-   - POST	  /api/restore	 Restore database from backup
+   - GET	 &nbsp;&nbsp;&nbsp;    /api/users&nbsp;&nbsp;&nbsp;  	   Retrieve all stored users
+   - GET	 &nbsp;&nbsp;&nbsp;    /api/backup&nbsp;&nbsp;&nbsp;	   Backup the MySQL database
+   - POST &nbsp;&nbsp;&nbsp;    /api/restore&nbsp;&nbsp;&nbsp;	   Restore database from backup
 
    **Twitter OAuth API**
-   - GET	 /auth/twitter	            Initiate Twitter authentication
-   - GET	 /auth/twitter/callback	    Handle Twitter OAuth response
+   - GET	 &nbsp;&nbsp;&nbsp;     /auth/twitter&nbsp;&nbsp;&nbsp;	             Initiate Twitter authentication
+   - GET	 &nbsp;&nbsp;&nbsp;     /auth/twitter/callback&nbsp;&nbsp;&nbsp;	    Handle Twitter OAuth response
 
  ## Email Notifications
    - Uses Symfony Mailer for sending emails asynchronously
