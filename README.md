@@ -14,12 +14,13 @@ Email Service: Symfony Mailer
 
 1) **Clone the Repository**
    git clone https://github.com/Geethika4427/Backend_Assignment.git
+   
    cd user-management
 
-2) **Install Dependencies**
+3) **Install Dependencies**
    composer install
 
-3) **Configure Environment Variables**
+4) **Configure Environment Variables**
    > Rename .env.example to .env and set up your database and Twitter API keys:
 
    DATABASE_URL=mysql://user:password@127.0.0.1:3306/user_management
