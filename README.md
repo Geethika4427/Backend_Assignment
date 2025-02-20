@@ -12,29 +12,25 @@ Email Service: Symfony Mailer
 
 ## Installation & Setup
 
-1) **Clone the Repository**
-   git clone https://github.com/Geethika4427/Backend_Assignment.git
-   
+1) **Clone the Repository**<br> 
+   git clone https://github.com/Geethika4427/Backend_Assignment.git<br>
    cd user-management
 
-3) **Install Dependencies**
+3) **Install Dependencies**<br>
    composer install
 
-4) **Configure Environment Variables**
+4) **Configure Environment Variables**<br>
    > Rename .env.example to .env and set up your database and Twitter API keys:
 
-   DATABASE_URL=mysql://user:password@127.0.0.1:3306/user_management
-   
-   TWITTER_API_KEY=your_api_key
-   
-   TWITTER_API_SECRET=your_api_secret
-   
+   DATABASE_URL=mysql://user:password@127.0.0.1:3306/user_management<br>
+   TWITTER_API_KEY=your_api_key<br>
+   TWITTER_API_SECRET=your_api_secret<br>
    MAILER_DSN=smtp://your_smtp_service
   
-5) **Run Database Migrations**
+5) **Run Database Migrations**<br>
    php bin/console doctrine:migrations:migrate
    
-6) **Start the Server**
+6) **Start the Server**<br>
    symfony server:start
 
 ## API Endpoints
