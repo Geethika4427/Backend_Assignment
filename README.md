@@ -80,17 +80,13 @@ Email Service: Symfony Mailer
      Restart your Symfony server to apply the changes:<br>
 
      symfony server:start
-https://drive.google.com/file/d/1rmrOWn6Jo7t7xtAjMw2nwUQQGzDF-0Gc/view?usp=drive_link
- ## Video Submission
 
-    1. Introduction video link
-       [Link Text](https://example.com)
-       https://drive.google.com/file/d/1rmrOWn6Jo7t7xtAjMw2nwUQQGzDF-0Gc/view?usp=drive_link
-       
-    2. Screen Record video
-    
-       https://drive.google.com/file/d/18e3vg_orHD4gKhgf6ssXBgOdXkT0cW9m/view?usp=drive_link
-## 
+ ## Video Submission
+   1. Introduction video link 
+      https://drive.google.com/file/d/1rmrOWn6Jo7t7xtAjMw2nwUQQGzDF-0Gc/view?usp=drive_link
+   2. Screen Record video
+      https://drive.google.com/file/d/18e3vg_orHD4gKhgf6ssXBgOdXkT0cW9m/view?usp=drive_link
+
 
 
 
