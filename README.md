@@ -42,7 +42,7 @@ Email Service: Symfony Mailer
    - POST &nbsp;&nbsp;&nbsp;    http://127.0.0.1:8000/api/upload/api/restore&nbsp;&nbsp;&nbsp;	   Restore database from backup
 
    **Twitter OAuth API**
-   - GET	 &nbsp;&nbsp;&nbsp;     /auth/twitter&nbsp;&nbsp;&nbsp;	             Initiate Twitter authentication
+   - GET	 &nbsp;&nbsp;&nbsp;     https://c060-60-243-164-51.ngrok-free.app/auth/twitter/auth/twitter&nbsp;&nbsp;&nbsp;	             Initiate Twitter authentication
    - GET	 &nbsp;&nbsp;&nbsp;     /auth/twitter/callback&nbsp;&nbsp;&nbsp;	             Handle Twitter OAuth response
 
  ## Email Notifications
@@ -52,7 +52,6 @@ Email Service: Symfony Mailer
  ## Twitter OAuth Configuration
    1. Register a Twitter Developer Account
    2. Create an OAuth 1.0a App in Twitter Developer Portal
-         - https://your-domain.com/auth/twitter/callback
    3. Obtain API Key and API Secret Key
    4. Update .env file with these credentials
 
@@ -76,6 +75,7 @@ Email Service: Symfony Mailer
    4) Update .env File<br>
       Modify your .env file to use Ngrok’s URL:<br>
       TWITTER_CALLBACK_URL= https://random-id.ngrok.io/auth/twitter/callback
+      
    5)Restart Symfony Server<br>
      Restart your Symfony server to apply the changes:<br>
 
