@@ -23,17 +23,20 @@ Email Service: Symfony Mailer
    > Rename .env.example to .env and set up your database and Twitter API keys:
 
    DATABASE_URL=mysql://user:password@127.0.0.1:3306/user_management
+   
    TWITTER_API_KEY=your_api_key
+   
    TWITTER_API_SECRET=your_api_secret
+   
    MAILER_DSN=smtp://your_smtp_service
   
-4) **Run Database Migrations**
+5) **Run Database Migrations**
    php bin/console doctrine:migrations:migrate
    
-5) **Start the Server**
+6) **Start the Server**
    symfony server:start
 
-# API Endpoints
+## API Endpoints
 
   **User Management API**
    - POST	  /api/upload	   Upload and store user data from CSV
@@ -45,18 +48,18 @@ Email Service: Symfony Mailer
    - GET	 /auth/twitter	            Initiate Twitter authentication
    - GET	 /auth/twitter/callback	    Handle Twitter OAuth response
 
- # Email Notifications
+ ## Email Notifications
    - Uses Symfony Mailer for sending emails asynchronously
    - Sends email confirmation after CSV upload
 
- # Twitter OAuth Configuration
+ ## Twitter OAuth Configuration
    1. Register a Twitter Developer Account
    2. Create an OAuth 1.0a App in Twitter Developer Portal
          - https://your-domain.com/auth/twitter/callback
    3. Obtain API Key and API Secret Key
    4. Update .env file with these credentials
 
- # Video Submission
+ ## Video Submission
    ()
 
 
