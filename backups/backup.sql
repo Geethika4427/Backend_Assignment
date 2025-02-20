@@ -47,7 +47,7 @@ CREATE TABLE `doctrine_migration_versions` (
 
 LOCK TABLES `doctrine_migration_versions` WRITE;
 /*!40000 ALTER TABLE `doctrine_migration_versions` DISABLE KEYS */;
-INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES ('DoctrineMigrations\\Version20250218103616','2025-02-18 10:39:29',89);
+INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES ('DoctrineMigrations\\Version20250218103616','2025-02-18 10:39:29',89),('DoctrineMigrations\\Version20250220172803','2025-02-20 17:28:30',101);
 /*!40000 ALTER TABLE `doctrine_migration_versions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,6 +83,35 @@ LOCK TABLES `messenger_messages` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `twitter_users`
+--
+
+DROP TABLE IF EXISTS `twitter_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `twitter_users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `twitter_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oauth_token` longtext COLLATE utf8mb4_unicode_ci,
+  `oauth_token_secret` longtext COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_901AA066C63E6FFF` (`twitter_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `twitter_users`
+--
+
+LOCK TABLES `twitter_users` WRITE;
+/*!40000 ALTER TABLE `twitter_users` DISABLE KEYS */;
+INSERT INTO `twitter_users` (`id`, `twitter_id`, `username`, `email`, `oauth_token`, `oauth_token_secret`) VALUES (1,'1892253446084128768','Geethika1470','joshgeethika1999@gmail.com',NULL,NULL);
+/*!40000 ALTER TABLE `twitter_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -97,7 +126,7 @@ CREATE TABLE `user` (
   `address` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `role` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,35 +135,8 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`, `name`, `email`, `username`, `address`, `role`) VALUES (1,'John Doe','johndoe@example.com','johndoe','123 Main St','USER'),(2,'Jane Smith','janesmith@example.com','janesmith','456 Oak St','ADMIN'),(5,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(16,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(17,'Preeti Kashyap','vgeethika26@gmail.com','preeti','Bangalore','USER');
+INSERT INTO `user` (`id`, `name`, `email`, `username`, `address`, `role`) VALUES (1,'John Doe','johndoe@example.com','johndoe','123 Main St','USER'),(2,'Jane Smith','janesmith@example.com','janesmith','456 Oak St','ADMIN'),(5,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(16,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(17,'Preeti Kashyap','vgeethika26@gmail.com','preeti','Bangalore','USER'),(18,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(19,'Preeti Kashyap','vgeethika26@gmail.com','preeti','Bangalore','USER'),(20,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(21,'Preeti Kashyap','vgeethika26@gmail.com','preeti','Bangalore','USER'),(22,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER'),(23,'Preeti Kashyap','vgeethika26@gmail.com','preeti','Bangalore','USER');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `user_backup`
---
-
-DROP TABLE IF EXISTS `user_backup`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user_backup` (
-  `id` int NOT NULL DEFAULT '0',
-  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `role` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_backup`
---
-
-LOCK TABLES `user_backup` WRITE;
-/*!40000 ALTER TABLE `user_backup` DISABLE KEYS */;
-INSERT INTO `user_backup` (`id`, `name`, `email`, `username`, `address`, `role`) VALUES (1,'John Doe','johndoe@example.com','johndoe','123 Main St','USER'),(2,'Jane Smith','janesmith@example.com','janesmith','456 Oak St','ADMIN'),(5,'Geethika Veerla','geethikaveerla8@gmail.com','geethika','Hyderabad','USER');
-/*!40000 ALTER TABLE `user_backup` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -154,4 +156,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-20 19:15:11
+-- Dump completed on 2025-02-21  1:07:25
